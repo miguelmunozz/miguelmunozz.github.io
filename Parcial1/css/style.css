@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-header{
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    z-index: 100;
+    color: white;
+    height: 70px;
+}
+
+.contenedor-header ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.articulos{
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px,1fr));
+    gap: 50px;
+    padding: 3vw 10vw;
+    padding-top: 20px;
+}
+
+.articulos img{
+    width: 50%;
+}
+
+.contacto{
+    padding: 20px 30px;
+}
+
+.contacto h3{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.contacto textarea{
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.contacto button{
+    margin-top: 8px;
+    height: 40px;
+    width: 20%;
+}
+
+.rEstudiantes h3{
+    padding: 20px 30px;
+    padding-bottom: 0;
+}
+
+.rEstudiantes table{
+    padding: 20px 30px;
+}
+
+.rEstudiantes tr{
+    height: 25px;
+}
+
+.rEstudiantes th{
+    width: 80px;
+}
+
+
+.footer{
+    padding: 20px 0;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    text-align: center;
+}
