@@ -13,6 +13,7 @@ taskForm.addEventListener('submit', function (event) {
     taskItem.innerHTML = `
         <span>${taskText}</span>
         <button class="complete-btn">✅</button>
+        <button class="edit-btn">✏️</button>
         <button class="delete-btn">❌</button>
     `;
 
@@ -28,5 +29,15 @@ taskList.addEventListener('click', function (event) {
     } else if (event.target.classList.contains('complete-btn')) {
         const taskItem = event.target.parentElement;
         taskItem.classList.toggle('completed');
+    }
+    else if (event.target.classList.contains('edit-btn')) {
+        const taskItem = event.target.parentElement;
+        const taskSpan = taskItem.querySelector('span');
+        const newTaskText = prompt('Edita tu tarea:', taskSpan.textContent);
+        if (newTaskText !== null && newTaskText.trim() !== '') {
+            taskSpan.textContent = newTaskText.trim();
+        } else if (newTaskText !== null) {
+            alert('El texto de la tarea no puede estar vacío.');
+        }
     }
 });
