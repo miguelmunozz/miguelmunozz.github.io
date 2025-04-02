@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(95, 0, 0);
+}
+
+.container {
+    background-color: rgb(248, 79, 79);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(95, 0, 0);
+}
+
+#task-input::placeholder {
+    color: rgba(95, 0, 0, 0.7);
+}
+
+button[type="submit"] {
+    background-color: white;
+    color: rgb(95, 0, 0);
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(95, 0, 0);
+    color: white;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    background-color: white;
+    color: rgb(95, 0, 0);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item span {
+    flex: 1;
+    text-align: left;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #c8e6c9;
+}
+
+.task-item.completed {
+    background-color: #2e7d32;
+    color: white
+}
+
+.complete-btn {
+    background-color: #00c853;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.complete-btn:hover {
+    background-color: #00c853;
+    transform: scale(1.1); 
+}
+
+.delete-btn {
+    background-color: white; 
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
